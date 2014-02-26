@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'myblog',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,7 +84,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/home/sako/git/django-microblog/myblog/static'
+
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'mysite/templates'),)
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
+
+CKEDITOR_UPLOAD_PATH = "/home/sako/git/django-microblog/myblog/uploads"
+
+CKEDITOR_CONFIGS = {
+    'spectacular_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}

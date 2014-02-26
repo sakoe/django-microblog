@@ -17,4 +17,5 @@ urlpatterns = patterns('',
         'django.contrib.auth.views.logout',
         {'next_page': '/'},
         name="logout"),
+    url(r'^ckeditor/', include('ckeditor.urls')),
 )
